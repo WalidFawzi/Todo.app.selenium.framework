@@ -13,11 +13,13 @@ public class LoginTest extends BaseTest {
     @Test
     public void shouldBeAbleToLoginWithEmailAndPassword (){
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.load();
-        loginPage.login("hatem@example.com","123456");
-        TodoPage todoPage = new TodoPage(driver);
-        boolean isWelcomeDisplayed = todoPage.isWelcomeMsgDisplayed();
-        Assert.assertTrue(isWelcomeDisplayed,"Incorrect Message");
+        boolean isWelcomeDisplayed =
+         loginPage
+                 .load()
+                .login("hatem@example.com","123456")
+                 .isWelcomeMsgDisplayed();
+
+        Assert.assertTrue(isWelcomeDisplayed,"The Welcome Message is not displayed");
     }
 
 

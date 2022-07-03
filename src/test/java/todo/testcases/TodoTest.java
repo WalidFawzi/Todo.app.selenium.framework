@@ -12,23 +12,23 @@ public class TodoTest extends BaseTest {
     @Test
     public void shouldBeAbleToAddNewTodo () {
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.load();
-        TodoPage todoPage = loginPage.login("hatem@example.com","123456");
-        NewTodoPage newTodoPage = todoPage.clickOnAddBtn();
-        newTodoPage.addNewTodo("Learn Javaa");
-        String actualResult = todoPage.todoItemGettext();
+        String actualResult =  loginPage
+                .load()
+                .login("hatem@example.com","123456")
+                .clickOnAddBtn().addNewTodo("Learn Javaa")
+                .todoItemGettext();
         Assert.assertEquals(actualResult,"Learn Javaa");
     }
-    @Test
+    @Test (enabled = false)
     public void shouldBeAbleToDeleteTodo (){
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.load();
-        TodoPage todoPage = loginPage.login("hatem@example.com","123456");
-        NewTodoPage newTodoPage = todoPage.clickOnAddBtn();
-        //New Todo page
-        newTodoPage.addNewTodo("New Course");
-        todoPage.clickOnDeleteBtn();
-        boolean actualResult = todoPage.isTodosMsgDisplayed();
+        boolean actualResult = loginPage
+                .load()
+                .login("hatem@example.com","123456")
+                .clickOnAddBtn()
+                .addNewTodo("New Course")
+                .clickOnDeleteBtn()
+                .isTodosMsgDisplayed();
         Assert.assertEquals(actualResult,true);
     }
 }

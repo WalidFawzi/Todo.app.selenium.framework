@@ -25,7 +25,8 @@ public class LoginPage extends BasePage {
         loginBtn.click();
         return new TodoPage(driver);
     }
-    public void load (){
+    public LoginPage load (){
         driver.get("https://qacart-todo.herokuapp.com/");
+        return this;
     }
 }

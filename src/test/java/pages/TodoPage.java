@@ -34,8 +34,9 @@ public class TodoPage extends BasePage {
     public String todoItemGettext (){
         return todoItem.getText();
     }
-    public void clickOnDeleteBtn (){
+    public TodoPage clickOnDeleteBtn (){
         deleteBtn.click();
+        return this;
     }
     public boolean isTodosMsgDisplayed (){
         return noTodosMsg.isDisplayed();
