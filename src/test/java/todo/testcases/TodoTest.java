@@ -1,12 +1,10 @@
 package todo.testcases;
 
 import base.BaseTest;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
-import pages.NewTodoPage;
-import pages.TodoPage;
+import utils.ConfigUtils;
 
 public class TodoTest extends BaseTest {
     @Test
@@ -14,7 +12,7 @@ public class TodoTest extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         String actualResult =  loginPage
                 .load()
-                .login("hatem@example.com","123456")
+                .login(ConfigUtils.getInstance().getEmail(),ConfigUtils.getInstance().getPassword())
                 .clickOnAddBtn().addNewTodo("Learn Javaa")
                 .todoItemGettext();
         Assert.assertEquals(actualResult,"Learn Javaa");
@@ -24,7 +22,7 @@ public class TodoTest extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         boolean actualResult = loginPage
                 .load()
-                .login("hatem@example.com","123456")
+                .login(ConfigUtils.getInstance().getEmail(),ConfigUtils.getInstance().getPassword())
                 .clickOnAddBtn()
                 .addNewTodo("New Course")
                 .clickOnDeleteBtn()

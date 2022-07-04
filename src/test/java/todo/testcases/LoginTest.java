@@ -1,11 +1,10 @@
 package todo.testcases;
 
 import base.BaseTest;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
-import pages.TodoPage;
+import utils.ConfigUtils;
 
 
 public class LoginTest extends BaseTest {
@@ -16,7 +15,7 @@ public class LoginTest extends BaseTest {
         boolean isWelcomeDisplayed =
          loginPage
                  .load()
-                .login("hatem@example.com","123456")
+                 .login(ConfigUtils.getInstance().getEmail(), ConfigUtils.getInstance().getPassword())
                  .isWelcomeMsgDisplayed();
 
         Assert.assertTrue(isWelcomeDisplayed,"The Welcome Message is not displayed");

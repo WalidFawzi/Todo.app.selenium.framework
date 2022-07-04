@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="3" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-07-04T14:23:16 AST" name="Command line suite" finished-at="2022-07-04T14:23:26 AST" duration-ms="9991">
+    <groups>
+    </groups>
+    <test started-at="2022-07-04T14:23:16 AST" name="Command line test" finished-at="2022-07-04T14:23:26 AST" duration-ms="9991">
+      <class name="todo.testcases.TodoTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:todo.testcases.TodoTest@691a7f8f]" started-at="2022-07-04T14:23:22 AST" name="setup" finished-at="2022-07-04T14:23:22 AST" duration-ms="870" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="shouldBeAbleToAddNewTodo()[pri:0, instance:todo.testcases.TodoTest@691a7f8f]" started-at="2022-07-04T14:23:22 AST" name="shouldBeAbleToAddNewTodo" finished-at="2022-07-04T14:23:26 AST" duration-ms="3427" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldBeAbleToAddNewTodo -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:todo.testcases.TodoTest@691a7f8f]" started-at="2022-07-04T14:23:26 AST" name="tearDown" finished-at="2022-07-04T14:23:26 AST" duration-ms="168" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- todo.testcases.TodoTest -->
+      <class name="todo.testcases.LoginTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:todo.testcases.LoginTest@780cb77]" started-at="2022-07-04T14:23:16 AST" name="setup" finished-at="2022-07-04T14:23:18 AST" duration-ms="1808" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="shouldBeAbleToLoginWithEmailAndPassword()[pri:0, instance:todo.testcases.LoginTest@780cb77]" started-at="2022-07-04T14:23:18 AST" name="shouldBeAbleToLoginWithEmailAndPassword" finished-at="2022-07-04T14:23:21 AST" duration-ms="3533" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldBeAbleToLoginWithEmailAndPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:todo.testcases.LoginTest@780cb77]" started-at="2022-07-04T14:23:21 AST" name="tearDown" finished-at="2022-07-04T14:23:22 AST" duration-ms="145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- todo.testcases.LoginTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

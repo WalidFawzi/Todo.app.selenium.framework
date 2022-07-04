@@ -4,6 +4,9 @@ import base.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utils.ConfigUtils;
+
+import java.util.Properties;
 
 public class LoginPage extends BasePage {
 
@@ -26,7 +29,7 @@ public class LoginPage extends BasePage {
         return new TodoPage(driver);
     }
     public LoginPage load (){
-        driver.get("https://qacart-todo.herokuapp.com/");
+        driver.get(ConfigUtils.getInstance().getBaseUrl());
         return this;
     }
 }
