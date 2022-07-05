@@ -3,8 +3,10 @@ package api;
 import io.restassured.http.Cookies;
 import io.restassured.response.Response;
 import objects.User;
+import utils.ConfigUtils;
 import utils.UserUtils;
 
+import static config.EndPoint.API_REGISTER_ENDPOINT;
 import static io.restassured.RestAssured.given;
 
 public class RegisterApi {
@@ -36,12 +38,12 @@ public class RegisterApi {
 
         Response response =
                 given()
-                    .baseUri("https://qacart-todo.herokuapp.com/")
+                    .baseUri(ConfigUtils.getInstance().getBaseUrl())
                     .header("Content-Type","application/json")
                     .body(user)
                     .log().all()
                 .when()
-                    .post("/api/v1/users/register")
+                    .post(API_REGISTER_ENDPOINT)
                 .then()
                      .log().all()
                      .extract().response();

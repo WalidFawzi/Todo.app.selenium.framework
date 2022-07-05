@@ -9,7 +9,7 @@ import utils.ConfigUtils;
 public class TodoTest extends BaseTest {
     @Test
     public void shouldBeAbleToAddNewTodo () {
-        LoginPage loginPage = new LoginPage(driver);
+        LoginPage loginPage = new LoginPage(getDriver());
         String actualResult =  loginPage
                 .load()
                 .login(ConfigUtils.getInstance().getEmail(),ConfigUtils.getInstance().getPassword())
@@ -19,7 +19,7 @@ public class TodoTest extends BaseTest {
     }
     @Test (enabled = false)
     public void shouldBeAbleToDeleteTodo (){
-        LoginPage loginPage = new LoginPage(driver);
+        LoginPage loginPage = new LoginPage(getDriver());
         boolean actualResult = loginPage
                 .load()
                 .login(ConfigUtils.getInstance().getEmail(),ConfigUtils.getInstance().getPassword())
