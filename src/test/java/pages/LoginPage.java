@@ -8,6 +8,8 @@ import utils.ConfigUtils;
 
 import java.util.Properties;
 
+import static java.sql.DriverManager.getDriver;
+
 public class LoginPage extends BasePage {
 
     public LoginPage(WebDriver driver) {
