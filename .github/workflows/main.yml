@@ -1,9 +1,6 @@
 name: Run Selenium Test
 
-on:
-  push:
-    branches: ["master"]
-
+on: [push]
 jobs:
   test:
     runs-on: macos-latest
