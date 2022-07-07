@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="SuiteName">
     <listeners>
-        <listener class-name="extentreports.ExtentReports" />
+        <listener class-name="extentreports.ExtentReporterNG" />
     </listeners>
     <test name="Test" allow-return-values="true">
         <classes>
