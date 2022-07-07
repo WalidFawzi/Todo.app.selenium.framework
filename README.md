@@ -1,5 +1,5 @@
 # Selenium Framework
-Selenium Open Source Testing Automation Framework(OSTAF) is a framework which helps the tester in automating test execution of web applications without recording or writing the selenium scripts.
+Selenium Open Source Testing Automation Framework(OSTAF) is a framework which helps the tester in automating test execution of web applications.
 
 #How to build
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
