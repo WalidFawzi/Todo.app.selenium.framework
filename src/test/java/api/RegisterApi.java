@@ -32,6 +32,7 @@ public class RegisterApi {
         return this.accessToken;
     }
 
+    // Register method for making the API Request
     public void register (){
 
         User user =  UserUtils.generateRandomUser();
