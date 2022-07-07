@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="SuiteName">
+    <listeners>
+        <listener class-name="extentreports.ExtentReports" />
+    </listeners>
+    <test name="Test" allow-return-values="true">
+        <classes>
+            <class name="todo.testcases.LoginTest" />
+            <class name="todo.testcases.TodoTest" />
+
+        </classes>
+    </test>
+</suite>
