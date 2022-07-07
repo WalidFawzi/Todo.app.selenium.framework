@@ -1,6 +1,9 @@
 name: Run Selenium Test
 
-on: [push]
+on:
+  push:
+    branches: ["master"]
+
 jobs:
   test:
     runs-on: macos-latest
@@ -9,7 +12,7 @@ jobs:
       - uses: actions/setup-java@v3
         with:
           java-version: "11"
-          cache: maven
+          cache: "maven"
           distribution: "temurin"
       - uses: browser-actions/setup-chrome@latest
       - run: mvn clean test
